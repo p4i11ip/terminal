@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/jquery.terminal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.terminal/css/jquery.terminal.min.css"/>
+</head>
+<body>
+    <script>
+        $('body').terminal({
+            hello: function() {
+                this.echo('if you need any help, just type...');
+            },
+            help: function() {
+                this.echo(' - soundcloud');
+                this.echo(' - spotify');
+                this.echo(' - instagram');
+                this.echo(' - youtube');
+            },
+            soundcloud: function() {
+                const url = 'https://soundcloud.com/p4i11ip';
+
+                // Custom progress bar animation
+                const progressBar = document.createElement('div');
+                progressBar.style.width = '0%';
+                progressBar.style.height = '20px';
+                progressBar.style.backgroundColor = 'green';
+                progressBar.style.transition = 'width 2s ease-in-out';
+                document.body.appendChild(progressBar);
+
+                // Simulate progress (you can adjust the duration)
+                setTimeout(() => {
+                    progressBar.style.width = '100%';
+                    setTimeout(() => {
+                        // Once progress reaches 100%, open the URL:
+                        window.open(url, '_blank');
+                    }, 2000); // Adjust duration as needed
+                }, 100);
+
+                // Optional: Display a message
+                this.echo('Opening SoundCloud...');
+
+                // Optional: Reset progress bar after completion
+                setTimeout(() => {
+                    progressBar.style.width = '0%';
+                }, 3000); // Adjust duration as needed
+            },
+            spotify: function() {
+                const url = 'https://spotify.com/p4i11ip';
+
+                // Custom progress bar animation
+                const progressBar = document.createElement('div');
+                progressBar.style.width = '0%';
+                progressBar.style.height = '20px';
+                progressBar.style.backgroundColor = 'green';
+                progressBar.style.transition = 'width 2s ease-in-out';
+                document.body.appendChild(progressBar);
+
+                // Simulate progress (you can adjust the duration)
+                setTimeout(() => {
+                    progressBar.style.width = '100%';
+                    setTimeout(() => {
+                        // Once progress reaches 100%, open the URL:
+                        window.open(url, '_blank');
+                    }, 2000); // Adjust duration as needed
+                }, 100);
+
+                // Optional: Display a message
+                this.echo('Opening Spotify...');
+
+                // Optional: Reset progress bar after completion
+                setTimeout(() => {
+                    progressBar.style.width = '0%';
+                }, 3000); // Adjust duration as needed
+            },
+            instagram: function() {
+                const url = 'https://instagram.com/p4i11ip';
+
+                // Custom progress bar animation
+                const progressBar = document.createElement('div');
+                progressBar.style.width = '0%';
+                progressBar.style.height = '20px';
+                progressBar.style.backgroundColor = 'green';
+                progressBar.style.transition = 'width 2s ease-in-out';
+                document.body.appendChild(progressBar);
+
+                // Simulate progress (you can adjust the duration)
+                setTimeout(() => {
+                    progressBar.style.width = '100%';
+                    setTimeout(() => {
+                        // Once progress reaches 100%, open the URL:
+                        window.open(url, '_blank');
+                    }, 2000); // Adjust duration as needed
+                }, 100);
+
+                // Optional: Display a message
+                this.echo('Opening Instagram...');
+
+                // Optional: Reset progress bar after completion
+                setTimeout(() => {
+                    progressBar.style.width = '0%';
+                }, 3000); // Adjust duration as needed
+            },
+            youtube: function() {
+                const url = 'https://youtube.com/p4i11ip';
+
+                // Custom progress bar animation
+                const progressBar = document.createElement('div');
+                progressBar.style.width = '0%';
+                progressBar.style.height = '20px';
+                progressBar.style.backgroundColor = 'green';
+                progressBar.style.transition = 'width 2s ease-in-out';
+                document.body.appendChild(progressBar);
+
+                // Simulate progress (you can adjust the duration)
+                setTimeout(() => {
+                    progressBar.style.width = '100%';
+                    setTimeout(() => {
+                        // Once progress reaches 100%, open the URL:
+                        window.open(url, '_blank');
+                    }, 2000); // Adjust duration as needed
+                }, 100);
+
+                // Optional: Display a message
+                this.echo('Opening YouTube...');
+
+                // Optional: Reset progress bar after completion
+                setTimeout(() => {
+                    progressBar.style.width = '0%';
+                }, 3000); // Adjust duration as needed
+            }
+        }, {
+            greetings: 'hello...'
+        });
+    </script>    
+</body>
+</html>
